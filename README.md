@@ -18,7 +18,7 @@ https://github.com/user-attachments/assets/0c9d80a6-7ef1-4c96-ae4d-960721e19498
 ## 🎯 Features
 
 - **Hand Tracking**: Real-time hand tracking using MediaPipe
-- **Gesture Recognition**: Control modes via hand gestures (pinch, fist, open palm, peace, thumbs up)
+- **Gesture Recognition**: Control modes via hand gestures (pinch, fist, open palm)
 - **Inverse Kinematics**: Both analytical (geometric) and numerical (Jacobian-based) IK solvers
 - **D-H Parameters**: Proper Denavit-Hartenberg parameter implementation
 - **Cross-Platform**: 
