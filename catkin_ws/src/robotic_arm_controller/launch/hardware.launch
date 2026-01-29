@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Hardware Integration Launch File -->
+  
+  <!-- Load configuration -->
+  <rosparam file="$(find robotic_arm_controller)/config/robot_config.yaml" command="load"/>
+  
+  <!-- Hardware Bridge Node -->
+  <node name="hardware_bridge_node" pkg="robotic_arm_controller" type="hardware_bridge_node.py" output="screen">
+    <param name="serial_port" value="/dev/ttyUSB0"/>  <!-- Adjust for your system -->
+    <param name="baud_rate" value="115200"/>
+    <param name="enable_hardware" value="true"/>
+  </node>
+  
+  <!-- Optional: Also run simulation in parallel -->
+  <arg name="run_simulation" default="false"/>
+  <include file="$(find robotic_arm_controller)/launch/simulation.launch" if="$(arg run_simulation)"/>
+
+</launch>

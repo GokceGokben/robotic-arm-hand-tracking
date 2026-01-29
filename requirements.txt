@@ -1,0 +1,19 @@
+# Virtual Robotic Arm Controller - Python Dependencies
+
+# Computer Vision and Hand Tracking
+mediapipe>=0.10.0
+opencv-python>=4.8.0
+
+# Scientific Computing
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Hardware Communication
+pyserial>=3.5
+
+# ROS Python Support (install via apt/pip depending on ROS version)
+# For ROS Noetic: sudo apt install python3-rospy python3-tf python3-tf2-ros
+# Alternatively: pip install rospkg catkin_pkg
+
+# Utilities
+pyyaml>=6.0

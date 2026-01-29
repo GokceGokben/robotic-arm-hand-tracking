@@ -1,0 +1,41 @@
+# Robot D-H Parameters and Configuration
+
+# Denavit-Hartenberg parameters for each joint
+# Format: [theta, d, a, alpha]
+# theta: joint angle (variable for revolute joints)
+# d: link offset along z
+# a: link length along x
+# alpha: link twist about x
+
+dh_parameters:
+  - [0.0, 0.1, 0.0, 1.5708]    # Joint 1: Base rotation
+  - [0.0, 0.0, 0.3, 0.0]       # Joint 2: Shoulder pitch
+  - [0.0, 0.0, 0.25, 0.0]      # Joint 3: Elbow
+  - [0.0, 0.15, 0.0, 1.5708]   # Joint 4: Wrist roll
+  - [0.0, 0.0, 0.0, -1.5708]   # Joint 5: Wrist pitch
+  - [0.0, 0.1, 0.0, 0.0]       # Joint 6: Wrist yaw
+
+# Joint limits (radians)
+joint_limits:
+  joint_1: [-3.14159, 3.14159]
+  joint_2: [-1.5708, 1.5708]
+  joint_3: [-1.5708, 1.5708]
+  joint_4: [-3.14159, 3.14159]
+  joint_5: [-1.5708, 1.5708]
+  joint_6: [-3.14159, 3.14159]
+
+# Workspace boundaries (meters)
+workspace:
+  x_min: 0.2
+  x_max: 0.6
+  y_min: -0.3
+  y_max: 0.3
+  z_min: 0.1
+  z_max: 0.5
+
+# IK solver settings
+ik_solver:
+  method: "numerical"  # "analytical" or "numerical"
+  tolerance: 0.0001
+  max_iterations: 100
+  use_current_as_seed: true

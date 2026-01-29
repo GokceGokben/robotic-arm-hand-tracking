@@ -1,0 +1,53 @@
+# Hand Tracking Configuration
+
+# MediaPipe settings
+mediapipe:
+  model_complexity: 1  # 0 (lite), 1 (full), or 2 (heavy)
+  min_detection_confidence: 0.7
+  min_tracking_confidence: 0.5
+  max_num_hands: 1
+
+# Camera settings
+camera:
+  camera_id: 0
+  width: 640
+  height: 480
+  fps: 30
+
+# Coordinate mapping (camera space to robot space)
+coordinate_mapping:
+  # Camera workspace (normalized coordinates 0-1)
+  camera_x_min: 0.2
+  camera_x_max: 0.8
+  camera_y_min: 0.2
+  camera_y_max: 0.8
+  camera_z_min: -0.1
+  camera_z_max: 0.1
+  
+  # Robot workspace (meters)
+  robot_x_min: 0.2
+  robot_x_max: 0.6
+  robot_y_min: -0.3
+  robot_y_max: 0.3
+  robot_z_min: 0.1
+  robot_z_max: 0.5
+  
+  # Coordinate flipping
+  flip_x: false
+  flip_y: true  # Usually need to flip Y for camera
+  flip_z: false
+
+# Smoothing settings
+smoothing:
+  position_alpha: 0.3  # Lower = smoother but more lag (0-1)
+  
+# Gesture recognition
+gestures:
+  confidence_threshold: 0.7
+  debounce_time: 0.5  # seconds
+
+# Debug visualization
+debug:
+  publish_debug_image: true
+  show_landmarks: true
+  show_gestures: true
