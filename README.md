@@ -5,6 +5,8 @@ This project enables real-time control of a 6-DOF robotic arm using hand trackin
 
 ## Demo 
 
+https://github.com/user-attachments/assets/0c9d80a6-7ef1-4c96-ae4d-960721e19498
+
 
 **Main features:**
 * Real-time hand tracking (MediaPipe)
